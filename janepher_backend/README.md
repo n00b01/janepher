@@ -1,6 +1,3 @@
-# janepher
-Janepher is an AI-powered fashion app.
-
 # Janepher Backend
 
 FastAPI + PostgreSQL backend for the Janepher app.
@@ -12,3 +9,4 @@ How to run the dev server
 How to apply migrations
 
 API reference
+
