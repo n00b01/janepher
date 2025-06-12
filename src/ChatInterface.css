@@ -1,0 +1,170 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .chat-container {
+    flex-direction: row;
+  }
+}
+
+.chat-sidebar {
+  width: 100%;
+  max-width: 16rem;
+  padding: 1rem;
+  border-bottom: 1px solid #d1d5db;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .chat-sidebar {
+    border-bottom: none;
+    border-right: 1px solid #d1d5db;
+  }
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.history-item {
+  margin-bottom: 0.5rem;
+  color: #3b82f6;
+  cursor: pointer;
+}
+
+.history-item:hover {
+  text-decoration: underline;
+}
+
+.sidebar-icons {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.align-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.message-card {
+  max-width: 28rem;
+  padding: 0.75rem;
+}
+
+.user-message {
+  background-color: #dbeafe;
+}
+
+.ai-message {
+  background-color: white;
+}
+
+.message-text {
+  margin-bottom: 0.5rem;
+}
+
+.image-carousel {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.fav-button {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.chat-input {
+  padding: 1rem;
+  border-top: 1px solid #d1d5db;
+  background-color: white;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.favorites-container {
+  padding: 1rem;
+}
+
+.favorites-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .favorites-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.favorite-img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
