@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import { Card, CardContent } from "./assets/components/card";
 import { Button } from "./assets/components/button";
 import { Input } from "./assets/components/input";
-import { Avatar } from "./assets/components/Avatar";
 import { Settings, Star, User } from "lucide-react";
 import { motion } from "framer-motion";
 
+// ICON IMPORTS
+import janepher_logo from "./assets/janepher.svg"
+import attach_icon from "./assets/attach.png"
+import send_icon from "./assets/send.png"
+import fav_icon from "./assets/fav.png"
+
 
 import "./ChatInterface.css";
+import { li } from "framer-motion/client";
 
 const dummyHistory = [
   { id: 1, title: "Summer outfit ideas" },
@@ -45,36 +51,37 @@ const ChatInterface = () => {
     // Send input to Python backend here
   };
 
-  const addToFavorites = (img) => {
-    setFavorites((prev) => [...prev, img]);
+  const addToFavorites = (li) => {
+    setFavorites((prev) => [...prev, li]);
   };
 
-  const FavoritesPage = () => (
-    <div className="favorites-container">
-      <h2 className="favorites-title">My Favorites</h2>
-      <div className="favorites-grid">
-        {favorites.map((img, idx) => (
+const FavoritesPage = () => (
+  <div className="favorites-container">
+    <h2 className="favorites-title">My Favorites</h2>
+    <ul className="favorites-list">
+      {favorites.map((item, idx) => (
+        <li key={idx}>
           <a
-            key={idx}
-            href={img.source}
+            href={item.source}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={img.url}
-              alt="Favorite"
-              className="favorite-img"
-            />
+            {item.source}
           </a>
-        ))}
-      </div>
-    </div>
-  );
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
   return (
     <div className="chat-container">
       <aside className="chat-sidebar">
         <div>
+          <div className="web-logo">
+            <img src={janepher_logo} alt="j-logo" />
+          <h1 className="web-title">JANEPHER</h1>
+          </div>
           <h2 className="sidebar-title">History</h2>
           <ul>
             {dummyHistory.map((item) => (
@@ -107,23 +114,18 @@ const ChatInterface = () => {
                   <Card className={`message-card ${msg.sender === "ai" ? "ai-message" : "user-message"}`}>
                     <CardContent>
                       <p className="message-text">{msg.text}</p>
+                    {/* THIS IS WHERE I FIX MY LINKS */}
                       {msg.images && (
                         <div className="image-carousel">
                           {msg.images.map((img, idx) => (
-                            <div key={idx} className="carousel-item">
+                            <div key={idx} className="link-item">
                               <a href={img.source} target="_blank" rel="noopener noreferrer">
-                                <img
-                                  src={img.url}
-                                  alt="Fashion"
-                                  className="carousel-img"
-                                />
-                              </a>
+                                      shoes@pinterest.com</a>
                               <Button
-                                size="sm"
+                                
                                 className="fav-button"
                                 onClick={() => addToFavorites(img)}
-                              >
-                                +Fav
+                              > <img src={fav_icon} alt="fav" width="20px" height="20px"/>
                               </Button>
                             </div>
                           ))}
@@ -141,7 +143,8 @@ const ChatInterface = () => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               />
-              <Button onClick={sendMessage}>Send</Button>
+              <Button onClick={sendMessage} className="sendButton"><img src={send_icon} alt="" width="20px" height="20px"/></Button>
+              <Button onClick={sendMessage} className="sendButton"><img src={attach_icon} alt="" width="20px" height="20px"/></Button>
             </div>
           </>
         )}

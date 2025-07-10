@@ -3,7 +3,7 @@ import "./input.css";
 
 export const Input = ({ value, onChange, onKeyDown, placeholder }) => {
   return (
-    <input
+    <textarea
       type="text"
       className="input"
       value={value}

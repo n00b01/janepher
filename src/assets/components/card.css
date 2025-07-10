@@ -5,6 +5,20 @@
   margin: 8px 0;
   padding: 12px;
 }
+.wrapper{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: fit-content;
+  
+}
+.message_icon{
+  margin: 20px 10px;
+  border:2px solid wheat;
+  border-radius: 47%;
+  padding: 8px 4px 4px 4px;
+  align-content: center;
+}
 
 .card-content {
   padding: 8px;

@@ -1,22 +1,51 @@
 .btn {
-  background-color: #111;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
+  justify-content: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:none;
   cursor: pointer;
-  font-size: 1rem;
+  padding: 0.5em;
+  border: none;
+  outline: none;
 }
 
-.btn-sm {
-  padding: 4px 10px;
-  font-size: 0.8rem;
+.fav-button {
+ background-color:transparent;
+ margin: 0px 2px 0px 2px;
+  border: none;
+  outline: none;
+}
+.sendButton{
+  background-color:transparent;
+  margin: 0px 2px 0px 2px;
+  border: none;
+  outline: none;
 }
 
-.btn-md {
-  padding: 8px 16px;
+.sendButton:hover{
+  transform: scale(1.05);
+  transition: 10ms ease-in-out;
 }
+.sendButton:active{
+  animation: send 3s  ease-in-out;
+}
+@keyframes send{
+  0%{
+    scale: 0;
+  }
+  50%{
+    scale:2px;
+  }
+  100%{
+    scale:0;
+  }
+}
+.btn img { 
+    justify-items: center;
+   align-self: center;
+  width: 30px;
+  height: 30px;
+          }
 
-.btn:hover {
-  background-color: #333;
-}
+          
+
