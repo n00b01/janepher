@@ -26,20 +26,7 @@
   transform: scale(1.05);
   transition: 10ms ease-in-out;
 }
-.sendButton:active{
-  animation: send 3s  ease-in-out;
-}
-@keyframes send{
-  0%{
-    scale: 0;
-  }
-  50%{
-    scale:2px;
-  }
-  100%{
-    scale:0;
-  }
-}
+
 .btn img { 
     justify-items: center;
    align-self: center;

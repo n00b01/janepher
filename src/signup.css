@@ -1,0 +1,54 @@
+
+.signup-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background: white;
+  z-index: 999;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+}
+
+.signup-panel h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.signup-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signup-panel input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.signup-panel button[type="submit"] {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-panel .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #888;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
