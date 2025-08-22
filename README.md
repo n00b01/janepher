@@ -36,6 +36,10 @@ alembic upgrade head
 
 ## credits 🎉
 
- **Greg Enos**  
+ **Greg Enos**
 
 [https://github.com/n00b01](https://github.com/n00b01)
+
+ **Mark Ndwaru** 
+ 
+[https://github.com/Marcos-dev41](https://github.com/Marcos-dev41)
